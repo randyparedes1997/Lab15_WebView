@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script type="text/javascript">
+            function showSnackBar(number){
+                let message = document.querySelector('#message').value;
+                if(message.trim() != '') {
+                    Android.showSnackBar(message);
+                } else {
+                    Android.showToastMessage("Ingrese texto");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p class="fs-1 text-center">MyWebApp</p>
+        <div class="p-4 col-12">
+            <input type="text" class="col-12 border border-dark" id="message" placeholder="Ingresar texto">
+            <input type="button" class="col-12 btn btn-dark" value="Show SnackBar" onclick="showSnackBar()" />
+        </div>
+    </body>
+</html>
